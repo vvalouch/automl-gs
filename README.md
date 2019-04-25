@@ -91,6 +91,21 @@ To retrain the model on new data:
 python3 model.py -d data.csv -m train
 ```
 
+### With docker
+
+Build the image:
+```shell
+docker build --tag automl_gs_docker_image .
+```
+
+Run `automl_gs` from a the docker container:
+```shell
+docker run -it --rm \
+  -v $(pwd):/automl_gs_data/ \
+  automl_gs_docker_image \
+  automl_gs titanic.csv Survived
+```
+
 ## CLI Arguments/Function Parameters
 
 You can view these at any time by running `automl_gs -h` in the command line.
