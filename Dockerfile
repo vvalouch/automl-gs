@@ -1,4 +1,4 @@
-FROM python:3.7.3-stretch
+FROM jupyter/scipy-notebook
 
 RUN pip3 install automl_gs
 RUN pip3 install tensorflow
