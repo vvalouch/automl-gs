@@ -116,7 +116,7 @@ def automl_grid_search(csv_path, target_field,
                                         pbar, is_notebook)
 
         # Clean up the generated file folder for the next trial.
-        shutil.rmtree(train_folder)
+        #shutil.rmtree(train_folder)
 
     metrics_csv.close()
     pbar.close()
